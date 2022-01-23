@@ -1,0 +1,51 @@
+
+#submit{
+    outline: 1px solid gray;
+    outline-style: inset;
+    background-color: lightseagreen;
+    /*make button outline/3d look*/
+}
+#coins{
+    display: flex;
+    align-items: center;
+}
+
+#penny{
+    height: 50px;
+    width: 50px;
+    background-color: #915e06;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nickel{
+    height: 65px;
+    width: 65px;
+    background-color: silver;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dime{
+    height: 50px;
+    width: 50px;
+    background-color: silver;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#quarter{
+    height: 80px;
+    width: 80px;
+    background-color: silver;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
