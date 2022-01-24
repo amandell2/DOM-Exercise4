@@ -10,25 +10,72 @@
 
 const amountInput = document.getElementById("amount");
 const coinInput = document.getElementById("coinType");
+let displayCoins = document.getElementById("coinContainer");
+const theForm = document.getElementById("theForm");
 
 //When sumbit is clicked , make the specified number of coins appear.
-//on click, display coin using class
-const submit = document.getElementById("submit");
 
-submit.addEventListener("click", (event) => {
+
+theForm.addEventListener("submit", (event) => {
     event.preventDefault();
     console.log("button is clicked");
     let coinAmount = amountInput.value;
     let coin = coinInput.value;
+    
     console.log(coin);
     console.log(coinAmount);
 
     //grab amount and type
     //display div and add multiple divs based on the 
-    if(coinInput.id === "coinP"){
-        let displayCoins = document.createElement("div");
+    if(coin === "Penny"){
+    //For loop to create number of divs given User Input number
+        for(i=0; i < coinAmount; i++){    
         let penny = document.createElement("div");
         penny.setAttribute('id', 'penny');
-        displayCoins.body.append(penny);
+        penny.innerText= "Penny";
+        displayCoins.append(penny);
+        }
+    } else if(coin === "Nickel"){
+        for(i=0; i < coinAmount; i++){    
+            let nickel = document.createElement("div");
+            nickel.setAttribute('id', 'nickel');
+            nickel.innerText= "Nickel";
+            displayCoins.append(nickel);
+        }
+    } else if(coin === "Dime"){
+        for(i=0; i < coinAmount; i++){    
+            let dime = document.createElement("div");
+            dime.setAttribute('id', 'dime');
+            dime.innerText= "Dime";
+            displayCoins.append(dime);
+        }
+    } else{
+        for(i=0; i < coinAmount; i++){    
+            let quarter = document.createElement("div");
+            quarter.setAttribute('id', 'quarter');
+            quarter.innerText= "Quarter";
+            displayCoins.append(quarter);
+        }
     }
+});
+
+const penny = document.getElementById("penny");
+penny.addEventListener("click", (event) => {
+   console.log(event);
+    penny.remove();
+});
+
+const nickel = document.getElementById("nickel");
+nickel.addEventListener("click", (event) => {
+    nickel.remove();
+});
+
+const dime = document.getElementById("dime");
+dime.addEventListener("click", (event) => {
+    dime.remove();
+});
+
+const quarter = document.getElementById("quarter");
+quarter.addEventListener("click", (event) => {
+    quarter.remove();
 });
