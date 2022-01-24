@@ -1,21 +1,9 @@
-//Coins hidden
-//const penny = document.getElementById("penny");
-//const nickel = document.getElementById("nickel");
-//const dime = document.getElementById("dime");
-//const quarter = document.getElementById("quarter");
-//penny.style.display = "none";
-//nickel.style.display = "none";
-//dime.style.display = "none";
-//quarter.style.display = "none";
-
 const amountInput = document.getElementById("amount");
 const coinInput = document.getElementById("coinType");
 let displayCoins = document.getElementById("coinContainer");
 const theForm = document.getElementById("theForm");
 
 //When sumbit is clicked , make the specified number of coins appear.
-
-
 theForm.addEventListener("submit", (event) => {
     event.preventDefault();
     console.log("button is clicked");
