@@ -34,6 +34,10 @@ theForm.addEventListener("submit", (event) => {
         penny.setAttribute('id', 'penny');
         penny.innerText= "Penny";
         displayCoins.append(penny);
+        penny.addEventListener("click", (event) => {
+            console.log(event);
+             penny.remove();
+         });
         }
     } else if(coin === "Nickel"){
         for(i=0; i < coinAmount; i++){    
@@ -41,6 +45,9 @@ theForm.addEventListener("submit", (event) => {
             nickel.setAttribute('id', 'nickel');
             nickel.innerText= "Nickel";
             displayCoins.append(nickel);
+            nickel.addEventListener("click", (event) => {
+                nickel.remove();
+            });
         }
     } else if(coin === "Dime"){
         for(i=0; i < coinAmount; i++){    
@@ -48,6 +55,9 @@ theForm.addEventListener("submit", (event) => {
             dime.setAttribute('id', 'dime');
             dime.innerText= "Dime";
             displayCoins.append(dime);
+            dime.addEventListener("click", (event) => {
+                dime.remove();
+            });            
         }
     } else{
         for(i=0; i < coinAmount; i++){    
@@ -55,27 +65,10 @@ theForm.addEventListener("submit", (event) => {
             quarter.setAttribute('id', 'quarter');
             quarter.innerText= "Quarter";
             displayCoins.append(quarter);
+            quarter.addEventListener("click", (event) => {
+                quarter.remove();
+            });
         }
     }
 });
 
-const penny = document.getElementById("penny");
-penny.addEventListener("click", (event) => {
-   console.log(event);
-    penny.remove();
-});
-
-const nickel = document.getElementById("nickel");
-nickel.addEventListener("click", (event) => {
-    nickel.remove();
-});
-
-const dime = document.getElementById("dime");
-dime.addEventListener("click", (event) => {
-    dime.remove();
-});
-
-const quarter = document.getElementById("quarter");
-quarter.addEventListener("click", (event) => {
-    quarter.remove();
-});
